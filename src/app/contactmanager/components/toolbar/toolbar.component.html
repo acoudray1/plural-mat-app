@@ -2,5 +2,14 @@
   <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
     <mat-icon>menu</mat-icon>
   </button>
+
   <span>Contact manager</span>
+  <span class="spacer"></span>
+  
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openAddContactDialog()">Create contact</button>
+  </mat-menu>
 </mat-toolbar>
