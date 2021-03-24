@@ -20,8 +20,8 @@ export class UserService {
     return this._users.asObservable();
   }
 
-  userById(id: number) {
-    return this.dataStore.users.find(x => x.id == id);
+  userById(id: number): User {
+    return this.dataStore.users.find(x => x.id == id)!;
   }
 
   loadAll() {
